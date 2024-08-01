@@ -8,4 +8,7 @@ jobs:
     steps:
       - name: print test
         run: echo test
-
+      - name: check repo files
+        run: ls ${{ github.workspace }}
+      - name: check index.js
+        run: cat ${{ github.workspace }}/index.js
