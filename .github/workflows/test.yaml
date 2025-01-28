@@ -1,13 +1,10 @@
 on:
-  workflow_dispatch:
-    
+  push:
+    branches:
+      - main
 jobs:
-  echo-test:
+  build0npm:
     runs-on: ubuntu-latest
     steps:
-      - name: print test
-        run: echo test
-      - name: check repo files
-        run: ls ${{ github.workspace }}
-      - name: check index.js
-        run: cat ${{ github.workspace }}/index.js
+      - uses: actions/checkout@v2
+      - run: ls
