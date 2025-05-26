@@ -1,0 +1,15 @@
+name: CI on PR
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  sayhello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: List files
+        run: ls -la ${{ github.workspace }}
+      - name: Say hello
+        run: echo "Hello ${{ github.actor }}"
