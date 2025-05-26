@@ -1,4 +1,5 @@
 name: CI on PR
+run-name: ${{ github.actor }} is PRing
 on:
   pull_request:
     branches:
